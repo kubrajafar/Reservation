@@ -1,0 +1,133 @@
+.main-confirm {
+  height: 100%;
+  width: 100%;
+  padding: 30px;
+
+  form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20px;
+    row-gap: 25px;
+    margin-bottom: 25px;
+
+    .input-item {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 76px;
+
+      label {
+        font-size: 14px;
+        line-height: 18px;
+
+        span {
+          color: rgba(239, 38, 77, 1);
+        }
+      }
+
+      input {
+        height: 46px;
+        border: 1px solid rgba(227, 234, 243, 1);
+        border-radius: 2px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  .confirm-note {
+    p {
+      font-size: 14px;
+      line-height: 18px;
+      margin-bottom: 12px;
+    }
+
+    .confirm-note-details {
+      width: 100%;
+      padding: 30px;
+      background-color: $white;
+      border: 1px solid rgba(227, 234, 243, 1);
+      border-radius: 2px;
+
+      .note-data {
+        display: flex;
+        gap: 10px;
+        font-size: 14px;
+
+        .data-header {
+          color: $light-purple;
+        }
+
+        .data-detail {
+          color: rgba(17, 17, 17, 1);
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  margin: 0 auto;
+  width: 500px;
+  height: 160px;
+  border-radius: 8px;
+  background-color: $white;
+  @include FlexBox;
+  flex-direction: column;
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+  transform: translate(-50%, -100%);
+  top: 35%;
+  left: 50%;
+  transition: transform 0.5s ease;
+
+  .modal_close {
+    color: rgba(127, 127, 127, 1);
+    font-size: 20px;
+    position: absolute;
+    top: 20px;
+    right: 22px;
+    cursor: pointer;
+  }
+
+  .modal_text {
+    font-size: 16px;
+    color: rgba(243, 156, 18, 1);
+    padding-top: 25px;
+  }
+}
+
+.bg-opasity {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: rgba(128, 128, 128, 0);
+  pointer-events: none;
+}
+
+.bg-opasity-active {
+  background-color: rgba(128, 128, 128, 0.3);
+}
+
+.modal.active-modal {
+  visibility: visible;
+  opacity: 1;
+  transform: translate(-50%, 0); /* Modalı ekranın ortasına getirin */
+  z-index: 10;
+}
+
+@media screen and (max-width: 568px) {
+  .modal{
+    width: 300px;
+  }
+  .main-confirm {
+    form {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+}

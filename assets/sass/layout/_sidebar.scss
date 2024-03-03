@@ -1,0 +1,38 @@
+#sidebar {
+  background-color: $medium-black;
+  height: 100%;
+  width: 100%;
+  padding-top: 30px;
+  position: relative;
+  .sidebar-item {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 25px;
+    .item-circle {
+      width: 25px;
+      height: 25px;
+      border-radius: 50%;
+      @include FlexBox;
+      background-color: $light-black;
+      color: $white;
+      font-size: 12px;
+    }
+    .item-text {
+      color: $dark-gray;
+      font-size: 14px;
+    }
+    &.notClick {
+      cursor: not-allowed;
+    }
+  }
+
+  .sidebar-line {
+    position: absolute;
+    bottom: 72px;
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+}

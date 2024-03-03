@@ -1,0 +1,180 @@
+.main-dateTime {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 30px;
+  .main-date {
+    width: 370px;
+
+    .date-header {
+      margin: 0 auto;
+      margin-bottom: 20px;
+      width: 195px;
+      color: $black;
+      @include FlexBox(space-between);
+      h3 {
+        font-size: 14px !important;
+      }
+      button {
+        font-size: 18px;
+        border: none;
+        background-color: transparent;
+      }
+    }
+
+    .date-data {
+      background-color: $white;
+      border-radius: 2px;
+      min-height: 320px;
+
+      ul {
+        display: flex;
+        text-align: center;
+        justify-content: space-between;
+        &.days {
+          max-width: 338px;
+          height: 50px;
+          width: 100%;
+          padding: 0 10px;
+          align-items: center;
+          color: rgba(200, 201, 204, 1);
+          font-size: 13px;
+          margin: 0 auto;
+          li {
+            margin-top: 15px;
+            max-width: 48px;
+          }
+        }
+        &.dates {
+          padding: 15px 20px;
+          gap: 10px;
+          border-top: 1px solid $light-gray;
+          display: grid;
+          grid-template-columns: repeat(7, 40px);
+          li {
+            @include FlexBox;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(236, 239, 242);
+            color: rgba(170, 172, 175, 1);
+            font-size: 15px;
+            font-family: "Poppins", sans-serif;
+            cursor: pointer;
+            font-weight: 400;
+            &.inactive {
+              opacity: 0;
+              visibility: hidden;
+            }
+            &.black-color {
+              color: #111;
+            }
+            &.background-purple {
+              background-color: $light-purple;
+              color: $white;
+            }
+          }
+        }
+      }
+    }
+  }
+  .main-time {
+    max-width: 305px;
+    width: 100%;
+    .time-header {
+      font-size: 14px !important;
+      margin-bottom: 20px;
+      height: 27px;
+      @include FlexBox;
+    }
+    .time-data {
+      background-color: $white;
+      min-height: 320px;
+
+      border-radius: 2px;
+      .time-data-header {
+        height: 50px;
+        color: $light-purple;
+        font-size: 14px;
+        @include FlexBox;
+      }
+      .time-data-main {
+        border-top: 1px solid $light-gray;
+        padding: 20px;
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        .time-content-box {
+          height: 55px;
+          @include FlexBox;
+          flex-direction: column;
+          background-color: rgb(236, 239, 242);
+          font-size: 14px;
+          color: rgba(17, 17, 17, 1);
+          cursor: pointer;
+          &.bg-color {
+            background-color: $light-green;
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-dateTime {
+    flex-direction: column;
+    align-items: center;
+    .main-time {
+      .time-data {
+        .time-data-main {
+          padding: 8px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .main-dateTime {
+    gap: 5px;
+    padding: 15px;
+    .main-date {
+      max-width: 320px;
+      .date-data {
+        ul {
+          &.days {
+            max-width: 280px;
+            padding: 0 5px;
+            font-size: 11px;
+            margin: 0 5px 0 15px;
+            li {
+              margin-top: 15px;
+
+              max-width: 48px;
+              &:last-child {
+                margin-left: 4px;
+              }
+            }
+          }
+          &.dates {
+            padding: 15px 20px;
+            gap: 5px;
+            max-width: 320px;
+            grid-template-columns: repeat(7, 30px);
+            li {
+              @include FlexBox;
+              width: 30px;
+              height: 30px;
+
+              font-size: 13px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

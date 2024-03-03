@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Booking-Reservation</title>
+   <!-- css -->
+   <link rel="stylesheet" href="./assets/css/main.css">
+
+   <!-- icon -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+   <main id="main">
+      <section id="reservation">
+         <aside id="sidebar">
+            <div>
+               <a href="./staff.html" class="sidebar-item">
+                  <div class="item-circle">
+                     <p class="poppins-semibold">1</p>
+                  </div>
+                  <div class="item-text">
+                     <p class="poppins-regular">Staff</p>
+                  </div>
+               </a>
+            </div>
+            <div>
+               <a href="./service.html" class="sidebar-item">
+                  <div class="item-circle">
+                     <p class="poppins-semibold">2</p>
+                  </div>
+                  <div class="item-text">
+                     <p class="poppins-regular">Service</p>
+                  </div>
+               </a>
+            </div>
+            <div>
+               <a href="./dateTime.html" class="sidebar-item">
+                  <div class="item-circle">
+                     <p class="poppins-semibold">3</p>
+                  </div>
+                  <div class="item-text">
+                     <p class="poppins-regular">Date & Time</p>
+                  </div>
+               </a>
+            </div>
+            <div>
+               <div class="sidebar-item notClick">
+                  <div class="item-circle">
+                     <p class="poppins-semibold">4</p>
+                  </div>
+                  <div class="item-text">
+                     <p class="poppins-regular">Confirmation</p>
+                  </div>
+               </div>
+            </div>
+            <div class="sidebar-line"></div>
+         </aside>
+
+         <main id="reservation-main">
+            <section id="main-parts">
+               <div class="main-header">
+                  <div class="header-text">
+                     <p class="poppins-medium">Select date & time</p>
+                  </div>
+               </div>
+
+
+               <div class="main-dateTime">
+                  <div class="main-date">
+                     <div class="date-header">
+                        <button id="prev" class="poppins-semibold"><i class="fa-solid fa-angle-left"></i></button>
+                        <h3 class="poppins-regular"></h3>
+                        <button id="next" class="poppins-semibold"><i class="fa-solid fa-angle-right"></i></button>
+                     </div>
+
+                     <div class="date-data">
+                        <ul class="days poppins-regular">
+                           <li>Sun</li>
+                           <li>Mon</li>
+                           <li>Tue</li>
+                           <li>Wed</li>
+                           <li>Thu</li>
+                           <li>Fri</li>
+                           <li>Sat</li>
+                        </ul>
+                        <ul class="dates"></ul>
+                     </div>
+
+                  </div>
+
+                  <div class="main-time">
+                     <div class="time-header">
+                        <p class="poppins-regular">Time</p>
+                     </div>
+                     <div class="time-data">
+                        <div class="time-data-header">
+                           <p class="poppins-regular time-select-text">Select date</p>
+                        </div>
+                        <div class="time-data-main">
+
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+
+
+               <div class="main-footer">
+                  <a href="./service.html" class="footer-back-btn poppins-semibold">BACK</a>
+                  <div class="footer-error-btn">
+
+                     <img src="./assets/img/error.svg" alt="">
+                     <p class="poppins-semibold">SELECT DATE & TIME</p>
+                  </div>
+                  <a href="" class="footer-next-btn poppins-semibold">NEXT</a>
+               </div>
+            </section>
+         </main>
+      </section>
+   </main>
+
+   <script type="module" src="./assets/js/timeDate.js"></script>
+
+   <script src="./assets/js/app.js"></script>
+
+</body>
+
+</html>
